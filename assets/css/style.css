@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    color: white
+}
+
+h1,
+h2,
+p,
+a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p.lead,
+p,
+a {
+    font-size: 19px;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
+}
+
+a:link,
+a:visited {
+    color: #fff;
+    text-decoration: underline;
+}
+
+a:hover,
+a:active {
+    opacity: 0.86;
+}
+
+p.bottom > a:link,
+p.bottom > a:visited {
+    text-decoration: none;
+}
+
+.material-icons {
+    vertical-align: middle;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* BACKGROUND COLORS */
+.bg-blue {
+    background-color: #3F51B5;
+}
+
+.bg-dark {
+    background-color: #252830;
+}
+
+/* PAGE HEADER */
+.page-header {
+    border: none;
+    background-color: #3F51B5;
+    padding: 1%;
+    padding-bottom: 1.5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 0 10px 14px rgba(0, 0, 0, 0.19), 0 6px 10px rgba(0, 0, 0, 0.23);
+}
+
+.page-header h1 {
+    font-size: 4em;
+    font-weight: 700;
+    font-family: 'Monsterat', sans-serif;
+}
+
+/* FIXED COLUMN LEFT*/
+.col-fixed {
+    position: fixed;
+    padding: 1%;
+    padding-top: 50px;
+    height: 100%;
+    z-index: 999;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.19), 0 6px 12px rgba(0, 0, 0, 0.23);
+}
+
+.col-fixed h1,
+.col-fixed p {
+    margin: 6%;
+}
+
+.col-fixed h1 {
+    font-size: 3em;
+}
+
+/* OVERLAY EFFECTS */
+.effects .img {
+    position: relative;
+    float: left;
+    margin-bottom: 5px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.19), 0 6px 12px rgba(0, 0, 0, 0.23);
+}
+
+.effects .img {
+    margin: 3% 5%;
+}
+
+.effects .img img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-width: 100% !important;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    display: block;
+    position: absolute;
+    z-index: 20;
+    background: rgba(63, 81, 181, 0.9);
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+a.close-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 45px;
+    text-align: center;
+    background: rgba(63, 81, 181, 0.5);
+    cursor: pointer;
+}
+
+a.close-overlay.hidden {
+    display: none;
+}
+
+.expand {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    color: #fff;
+}
+
+.effect .overlay {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 67px;
+}
+
+.effect .overlay .expand {
+    left: 0;
+    right: 0;
+}
+
+.effect .img.hover .overlay .expand {
+    bottom: 40%;
+}
+
+.effect .img.hover .overlay {
+    height: 100%;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 320px) and (max-width: 768px) {
+    .expand p,
+    .expand a,
+    .expand .material-icons {
+        word-wrap: break-all;
+    }
+    .effect .overlay {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 65px;
+    }
+    .effects .img {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    .col-fixed {
+        position: relative;
+    }
+    .page-header {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-fixed {
+        position: relative;
+    }
+    p.lead,
+    p,
+    a {
+        font-size: 15px;
+    }
+    .col-fixed h1,
+    .col-fixed p {
+        margin: 4%;
+    }
+    .effect .img.hover .overlay .expand {
+        bottom: 20%;
+    }
+    .padding-top {
+        padding-top: 50px;
+    }
+    .page-header {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    p.lead,
+    p,
+    a {
+        font-size: 12.5px;
+    }
+    .col-fixed h1,
+    .col-fixed p {
+        margin: 3%;
+    }
+    .col-fixed h1 {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1300px) {
+    p.lead,
+    p,
+    a {
+        font-size: 15px;
+    }
+    .col-fixed h1,
+    .col-fixed p {
+        margin: 4%;
+    }
+}

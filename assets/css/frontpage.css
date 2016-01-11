@@ -1,0 +1,14 @@
+html,
+body {
+	background-color: #2196F3;
+}
+
+body { padding-top: 0px; }
+
+h1 {
+	font-size: 4em;
+}
+
+.mastfoot {
+	color: #fafafa;
+}
